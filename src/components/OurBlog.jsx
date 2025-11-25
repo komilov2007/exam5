@@ -14,7 +14,6 @@ export default function OurBlogs() {
       </div>
       <hr className="border-t" style={{ borderColor: '#B4B4B4' }} />
       <div className="flex mt-[3%]  flex-col justify-between lg:flex-row gap-6">
-        {/* Left Card - 30% */}
         <div className="bg-white w-full rounded-xl shadow hover:shadow-lg transition overflow-hidden flex-[0_0_35%] lg:flex-[0_0_35%] w-full">
           <img src={Meta} className="w-full h-48 object-cover" />
           <div className="p-4">
@@ -30,10 +29,7 @@ export default function OurBlogs() {
             </p>
           </div>
         </div>
-
-        {/* Right Cards - 70% */}
         <div className="flex w-full flex-col gap-4 flex-[0_0_65%] lg:flex-[0_0_65%] w-full">
-          {/* Card 2 */}
           <div className="bg-white flex rounded-xl shadow hover:shadow-lg transition overflow-hidden">
             <img src={Quloqchin} className="w-[240px] h-48 object-cover" />
             <div className="p-4">
@@ -47,8 +43,6 @@ export default function OurBlogs() {
               </p>
             </div>
           </div>
-
-          {/* Card 3 */}
           <div className="bg-white flex rounded-xl shadow hover:shadow-lg transition overflow-hidden">
             <img src={Bitcoin} className="w-[240px] h-48 object-cover" />
             <div className="p-4">

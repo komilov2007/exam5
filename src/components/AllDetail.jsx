@@ -8,7 +8,6 @@ export default function PhonesDetail() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // 6 ta API link
   const urls = [
     'https://6924b19082b59600d7210e2d.mockapi.io/product',
     'https://6925949182b59600d7243905.mockapi.io/oxshash',
@@ -22,18 +21,11 @@ export default function PhonesDetail() {
   useEffect(() => {
     const fetchAll = async () => {
       try {
-        // 6 ta fetchni parallel ishlatish
         const responses = await Promise.all(urls.map((url) => fetch(url)));
         const jsonData = await Promise.all(responses.map((r) => r.json()));
-
-        // Barcha ma’lumotlarni bir massivga qo‘shish
         const allData = jsonData.flat();
-
-        // ID bo‘yicha topish
         const selected = allData.find((p) => String(p.id) === id);
-
         if (!selected) throw new Error('Phone not found');
-
         setPhone(selected);
       } catch (err) {
         setError(err.message);

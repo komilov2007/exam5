@@ -2,7 +2,6 @@ import { memo } from 'react';
 import ContactHero from '../components/ContactHero';
 import ContactInfo from '../components/ContactInfo';
 import ContactForm from '../components/ContactForm';
-import ContactMap from '../components/ContactMap';
 
 const Contact = () => {
   return (

@@ -4,7 +4,6 @@ export default function Hero() {
     <section className="pt-28 pb-16">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 items-center gap-10">
-          {/* Left Content */}
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-[#1c1c1c]">
               Tech Heim
@@ -20,8 +19,6 @@ export default function Hero() {
               Explore More
             </button>
           </div>
-
-          {/* Right Image */}
           <div className="flex justify-center overflow-hidden">
             <img
               src={Laptop}

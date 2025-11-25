@@ -1,7 +1,6 @@
 export default function BlogCard() {
   return (
     <div className="max-w-[1370px] mx-auto mt-12 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
-      {/* Blog rasm */}
       <div className="relative">
         <img
           src="https://images.unsplash.com/photo-1581091215366-13c5d37d0521?auto=format&fit=crop&w=1470&q=80"
@@ -14,8 +13,6 @@ export default function BlogCard() {
           </h1>
         </div>
       </div>
-
-      {/* Blog matn */}
       <div className="p-8 md:p-12">
         <h2 className="text-3xl font-bold mb-4">
           Top 10 React Tips for Beginners

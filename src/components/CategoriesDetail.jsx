@@ -70,7 +70,6 @@ export default function CategoriesDetail() {
 
   return (
     <div className="w-full max-w-[1370px]  mx-auto mt-20">
-      {/* Detail qismi */}
       <div className="flex justify-around mt-30 items-start gap-10">
         <img
           src={product.image}
@@ -99,7 +98,6 @@ export default function CategoriesDetail() {
             <div className="w-5 h-5 rounded-full border border-blue700"></div>
             <p>Buy in installments</p>
           </div>
-          {/* {casdkhhb} */}
           <div className="flex gap-2 mt-5">
             <div className="border  rounded-[5px] flex flex-col justify-center items-center p-1 text-gray-700">
               3 <span>month</span>
@@ -120,7 +118,6 @@ export default function CategoriesDetail() {
               </div>
             </div>
           </div>
-          {/* {fldadjg} */}
           <button className="py-2 mt-5 px-21 rounded-[10px] text border border-blue-700">
             Add to cart
           </button>
