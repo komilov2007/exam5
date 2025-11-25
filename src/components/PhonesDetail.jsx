@@ -98,6 +98,33 @@ export default function PhonesDetail() {
           </button>
         </div>
       </div>
+      <div className="flex gap-10 mt-10 border-b-2 border-gray-200 pb-5">
+        <p className="">Technical Details</p>
+        <p>Similar Products</p>
+        <p>Comments</p>
+      </div>
+      <div className="">
+        <div className=" rounded-lg p-4 flex flex-col justify-between">
+          <h2 className=" text-lg text-gray-500">
+            <span className="mr-10 mt-10 text-black font-semibold">
+              Product name:
+            </span>
+            {phone.title}
+          </h2>
+          <p className="text-lg mt-5 text-gray-500">
+            <span className="mr-10 text-black font-semibold">
+              Product name:
+            </span>
+            {phone.description}{' '}
+          </p>
+          <p className="text-lg mt-5 text-gray-500">
+            <span className="mr-10 text-black font-semibold">
+              Product name:
+            </span>
+            ${phone.price}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,9 +1,16 @@
 import { memo } from 'react';
+import FAQList from '../components/FAQList.jsx';
+import FAQItem from '../components/FAQItem.jsx';
+import FAQHero from '../components/FAQHero.jsx';
+import FAQSearch from '../components/FAQSearch.jsx';
 
 const FAQ = () => {
   return (
     <div>
-      <h2>FAQ</h2>
+      <FAQHero />
+      <FAQSearch />
+      <FAQItem />
+      <FAQList />
     </div>
   );
 };

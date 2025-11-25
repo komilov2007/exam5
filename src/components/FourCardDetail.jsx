@@ -30,7 +30,6 @@ export default function FourCardDetail() {
       <Link to="/" className="text-blue-500 mb-4 inline-block">
         ← Back to list
       </Link>
-
       <div className="flex flex-col lg:flex-row justify-between gap-6">
         {/* Chap rasm */}
         <img
@@ -90,6 +89,33 @@ export default function FourCardDetail() {
           <button className="py-2 mt-5 w-full rounded-[10px] text-blue-700 border border-blue-700">
             Add to cart
           </button>
+        </div>
+      </div>{' '}
+      <div className="flex gap-10  mt-10 border-b-2 border-gray-200 pb-5">
+        <p className="">Technical Details</p>
+        <p>Similar Products</p>
+        <p>Comments</p>
+      </div>
+      <div className="">
+        <div className=" rounded-lg p-4 flex flex-col justify-between">
+          <h2 className=" text-lg text-gray-500">
+            <span className="mr-10 mt-10 text-black font-semibold">
+              Product name:
+            </span>
+            {phone.title}
+          </h2>
+          <p className="text-lg mt-5 text-gray-500">
+            <span className="mr-10 text-black font-semibold">
+              Product name:
+            </span>
+            {phone.description}{' '}
+          </p>
+          <p className="text-lg mt-5 text-gray-500">
+            <span className="mr-10 text-black font-semibold">
+              Product name:
+            </span>
+            ${phone.price}
+          </p>
         </div>
       </div>
     </div>
