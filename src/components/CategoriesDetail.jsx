@@ -69,69 +69,70 @@ export default function CategoriesDetail() {
   if (!product) return <p className="mt-20 text-center">Loading...</p>;
 
   return (
-    <div className="w-full max-w-[1370px]  mx-auto mt-20">
-      <div className="flex justify-around mt-30 items-start gap-10">
+    <div className="w-full max-w-[1370px] mx-auto mt-20 px-4">
+      {/* MAIN PRODUCT SECTION */}
+      <div className="flex flex-col lg:flex-row justify-around items-start gap-10">
+        {/* PRODUCT IMAGE */}
         <img
           src={product.image}
           alt={product.title}
-          className="w-[300px] h-[300px] object-contain"
+          className="w-full max-w-[300px] h-[300px] object-contain mx-auto"
         />
-        <div>
+
+        {/* PRODUCT INFO */}
+        <div className="w-full">
           <h2 className="text-2xl font-bold">{product.title}</h2>
           <p className="text-gray-600 mt-3">{product.description}</p>
           <p className="text-xl font-semibold mt-4">${product.price}</p>
+
           <p className="mt-2 text-sm text-gray-500">
             Category: <b>{product.category}</b>
           </p>
         </div>
-        <div className="borde p-4 shadow hover:shadow-lg transition rounded-[10px]">
-          <div className="flex gap-40">
-            <h1>${product.price}</h1>
-            <p className="text-yellow-500">-12%</p>
+
+        {/* BUY CARD */}
+        <div className="w-full lg:w-[350px] border p-4 shadow hover:shadow-lg transition rounded-[10px]">
+          <div className="flex justify-between">
+            <h1 className="text-xl font-bold">${product.price}</h1>
+            <p className="text-yellow-500 font-semibold">-12%</p>
           </div>
 
-          <div className="flex items-center mt-5  gap-2">
-            <div className="bg-blue-700  rounded-full w-5 h-5"></div>
+          <div className="flex items-center mt-5 gap-2 cursor-pointer">
+            <div className="bg-blue-700 rounded-full w-5 h-5"></div>
             <p>Buy now</p>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="w-5 h-5 rounded-full border border-blue700"></div>
+
+          <div className="flex items-center gap-2 cursor-pointer">
+            <div className="w-5 h-5 rounded-full border border-blue-700"></div>
             <p>Buy in installments</p>
           </div>
-          <div className="flex gap-2 mt-5">
-            <div className="border  rounded-[5px] flex flex-col justify-center items-center p-1 text-gray-700">
-              3 <span>month</span>
-            </div>
-            <div className="flex">
-              <div className="border  rounded-[5px] flex flex-col justify-center items-center p-1 text-gray-700">
-                6 <span>month</span>
+
+          <div className="flex flex-wrap gap-2 mt-5">
+            {[3, 6, 12, 18].map((m) => (
+              <div
+                key={m}
+                className="border rounded-[5px] flex flex-col justify-center items-center p-2 text-gray-700 w-[70px]"
+              >
+                {m} <span className="text-xs">month</span>
               </div>
-            </div>
-            <div className="flex">
-              <div className="border  rounded-[5px] flex flex-col justify-center items-center p-1 text-gray-700">
-                12 <span>month</span>
-              </div>
-            </div>
-            <div className="flex">
-              <div className="border  rounded-[5px] flex flex-col justify-center items-center p-1 text-gray-700">
-                18 <span>month</span>
-              </div>
-            </div>
+            ))}
           </div>
-          <button className="py-2 mt-5 px-21 rounded-[10px] text border border-blue-700">
+
+          <button className="py-2 mt-5 w-full rounded-[10px] border border-blue-700">
             Add to cart
           </button>
         </div>
       </div>
 
+      {/* SIMILAR PRODUCTS */}
       <h3 className="text-xl font-bold mt-10 mb-4">Similar Products</h3>
 
-      <div className="grid cotainer md:grid-cols-5 sm:grid-cols-5 gap-5">
+      <div className="grid container grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
         {similar.length > 0 ? (
           similar.map((item) => (
             <div
               key={item.id}
-              className="p-4  rounded-lg bg-gray-200 shadow-sm hover:shadow-lg transition"
+              className="p-4 rounded-lg bg-gray-200 shadow-sm hover:shadow-lg transition"
             >
               <img
                 src={item.image}
@@ -144,7 +145,7 @@ export default function CategoriesDetail() {
           ))
         ) : (
           <p className="text-gray-500 col-span-5 text-center">
-            O‘xshash mahsulot notfound
+            O‘xshash mahsulot topilmadi
           </p>
         )}
       </div>
